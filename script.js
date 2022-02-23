@@ -34,8 +34,25 @@ function izracunaj() {
     let vrednostB = Number(b.value);
     let rezultat = vrednostA + vrednostB;
 
-    document.getElementById("rezultat").innerText = rezultat;
+    let res = document.getElementById("rezultat");
+
+    res.innerHTML = `Rezultat je <b>${rezultat}</b>`;
 }
+
+// 4
+function dodajIme() {
+    let ime = document.getElementById("ime").value;
+
+    let sablon = `<article class="osoba">
+                    <header>
+                        <h2>${ime}</h2>
+                    </header>
+                        <p>Podaci o osobi ${ime}</p>
+                </article>`
+
+    document.getElementById("imena").innerHTML += sablon // += nadovezuje se na postojeci string
+}
+
 
 function init() {
     let a = document.getElementById("input_a");
@@ -43,6 +60,10 @@ function init() {
 
     a.addEventListener("change", izracunaj);
     b.addEventListener("change", izracunaj);
+
+    let btn = document.getElementById("dodaj-ime");
+
+    btn.addEventListener("click", dodajIme);
 }
 
 window.addEventListener("load", init);
