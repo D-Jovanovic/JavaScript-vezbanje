@@ -26,15 +26,23 @@ function setujVrednost(indeks) {
 }
 //TRECI PRIMER
 // ucitavanje funkcije automatski kada se stranica ucita
+function izracunaj() {
+    let a = document.getElementById("input_a");
+    let b = document.getElementById("input_b");
+
+    let vrednostA = Number(a.value); //konvertovanje teksta u broj
+    let vrednostB = Number(b.value);
+    let rezultat = vrednostA + vrednostB;
+
+    document.getElementById("rezultat").innerText = rezultat;
+}
+
 function init() {
-    let msg = document.getElementById("msg");
+    let a = document.getElementById("input_a");
+    let b = document.getElementById("input_b");
 
-    let a = 10;
-    let b = 3;
-    let c = a + b;
-
-    msg.innerHTML = c;
-
+    a.addEventListener("change", izracunaj);
+    b.addEventListener("change", izracunaj);
 }
 
 window.addEventListener("load", init);
