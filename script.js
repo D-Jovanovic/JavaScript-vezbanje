@@ -23,6 +23,18 @@ function setujVrednost(indeks) {
     }
 
     poruka.innerText = tekst;
+}
+//TRECI PRIMER
+// ucitavanje funkcije automatski kada se stranica ucita
+function init() {
+    let msg = document.getElementById("msg");
 
+    let a = 10;
+    let b = 3;
+    let c = a + b;
+
+    msg.innerHTML = c;
 
 }
+
+window.addEventListener("load", init);
