@@ -66,9 +66,12 @@ function removeKlik() {
     let holder = document.getElementById("holder");
     let paragrafi = holder.querySelectorAll("p");
 
+    
     // za svaku promenljivu paragraf iz liste paragraf
     for (let paragraf of paragrafi) {
-        holder.removeChild("paragraf");
+        
+        holder.removeChild(paragraf); //bila greska ne trebaju navodnici
     }
 
 }
+
