@@ -1,0 +1,40 @@
+#zaposleni {
+    border: 3px solid black;
+    border-collapse: collapse; /*spajanje bordura nasih redova i kolona*/
+}
+
+#zaposleni th {
+    border: 1px solid white;
+    padding: 3px;
+    font-size: 10pt;
+    background-color: #dc0000;
+    color:  white;
+}
+
+#zaposleni tbody tr td {
+    border-bottom: 1px dashed black;
+    
+}
+
+#zaposleni tfoot tr {
+    background-color: #eee;
+}
+
+/*medju svim td elementima u tr elementima uzeti prvi poredu*/
+#zaposleni tbody tr td:nth-child(1),
+#zaposleni tbody tr td:nth-child(3)
+ {
+    text-align: right;
+}
+
+.text-right{
+    text-align: right;
+}
+
+#plata-zaglavlje {
+    vertical-align: bottom;
+}
+
+#suma-labela{
+    vertical-align: top;
+}
